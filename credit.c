@@ -17,10 +17,6 @@ void check(void){
 
      long num = get_long("Num : ");
 
-
-    //int modulus = round(num /= 10);
-    //int resultmod = modulus % 100;
-
     int a; // we are gonna use this to get the digits from the first set
     int sumfirst = 0; // use this to ge the sum of the first set
     int num2; // use this for the digit separation after squaring for the first set
@@ -51,7 +47,6 @@ void check(void){
 
         b = num3 % 10;
         sumsecond = sumsecond + b;
-
         num3 = num3 / 10;
 
        }
@@ -67,25 +62,22 @@ void check(void){
 
 
     //looping to get the sum of the first set
-    num = num/10;
+      num = num/10;
 
      while(num > 0){
-
+      
      a = num % 10;
-
      num = num / 100;
-
      a = a * 2;
 
      if( (a / 10) > 0 ){
 
          num2 = a;
+          
          while(num2 > 0){
 
          a = num2 % 10;
-
          sumfirst = sumfirst + a;
-
          num2 = num2/10;
          }
      }
@@ -103,7 +95,7 @@ void check(void){
      isValid = true;
     }
 
-//find out how many digits are in the original value
+    //find out how many digits are in the original value
      while(numfinal > 0){
 
      numfinal = numfinal / 10;
@@ -123,40 +115,27 @@ void check(void){
 
  }
 
- //int test = first;
-//printf("%i", test);
- //printf("\n");
-
 if((first == 34 || first == 37 ) && counter == 15 ){
 
  type = "AMEX\n";
 
  printf("AMEX\n");
- //printf("%s", type);
- //printf("\n");
 
 }
 
 else if((first >= 51 && first <= 55) && counter == 16){
 
-
    type = "MASTERCARD";
 
    printf("MASTERCARD\n");
-   //printf("%s", type);
-   //printf("\n");
 
 }
 
 
 else if((first/10) == 4 && (counter == 13 || counter == 16)){
 
-
      type = "VISA";
-
-      printf("VISA\n");
-     //printf("%s", type);
-     //printf("\n");
+     printf("VISA\n");
 
 }
 
@@ -168,6 +147,6 @@ else{
 
 else {
  printf("INVALID\n");
- //check();
 }
+     
 }
