@@ -1,2 +1,2 @@
 # CreditCard
-Application validates a credit card number
+Application that validates a credit card number
